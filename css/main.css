@@ -1,0 +1,293 @@
+/* CSS Reset     */
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+
+html{
+    scroll-behavior: smooth;     /*for scrolling */
+}
+/* CSS Variables */
+:root{
+    --navbar-height: 59px;
+
+}
+
+/* Navigation Bar */
+
+#navbar{
+    display: flex;   /*row m hojyga li item*/
+    align-items: center;
+    justify-content: center; 
+    font-family: 'Cabin', sans-serif;
+
+   position: absolute; 
+   /* top: 0px; */
+   left: 0px;
+   right: 0px;
+
+}
+
+ #navbar::before{
+    
+    content: "";
+    background-color: black;
+    position: absolute;
+     top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+   
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+       margin: 10px 34px;
+}
+
+#logo img{
+    height: 46px;
+      margin: 3px 6px;
+}
+/* Navbar style: list */
+
+
+ #navbar ul{
+    display: flex;
+     font-family: 'Baloo Bhai', cursive;
+   
+}
+
+.ml7 {
+  position: relative;
+  font-weight: 900;
+  font-size: 3.7em;
+}
+.ml7 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+.ml7 .letter {
+  transform-origin: 0 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+#navbar ul li{
+  /* color: antiquewhite; */
+ 
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+#navbar ul li a{
+      display: block;   /* block kyki by defalut inline hoti ha or padding bhii deni ha isliye disply block kia */
+      padding: 3px 22px;
+      border-radius: 20px;
+    text-decoration: none;
+    color: aliceblue;
+   
+}
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+    
+}
+
+
+/* Navigation Bar: List Styling */
+
+/* Home section start */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+   display: flex;
+    content: "";
+    background: url("/images/bg2.jpg") no-repeat center center/cover;
+    position: absolute;
+   
+     height: 602px; 
+     top: 0px;
+     left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+   
+}
+
+#home h1{
+    color: rgb(37, 32, 32);
+    text-align: center;
+      font-family: 'Bree Serif', serif;
+    
+    
+}
+#home p{
+    color: rgb(37, 32, 32);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+    
+}
+/* Services section */
+
+#services{
+    margin: 30px;
+    display: flex; 
+}
+#services .Box{
+   
+    border: 2px solid brown;
+    padding: 34px;
+   margin: 2px 55px;
+   border-radius: 20px;
+   background: #f2f2f2;
+    margin-bottom: 20px;
+} 
+#services .Box img{
+    height: 140px;
+    display: block;
+    margin: auto;
+}
+#services .Box p{
+        font-family: 'Baloo Bhai', cursive;
+
+}
+
+
+/* Client section */
+
+#client-section{
+    
+     position: relative; /*jitni jgh hogi utni lga */
+}
+
+ /* client section ko pseudo selector laga ke background color dedo */
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url("/images/bg10.jpg")no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+.client{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 34px;
+}
+.client img{
+    height: 100px;
+}
+
+
+/* client section end */
+
+/* contact section */
+
+#contact{
+  
+ position: relative;
+ color: bisque;
+
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+ 
+    width: 100%;
+    height: 100%;
+  
+     z-index: -1;
+     opacity: 0.9;
+    
+ background: url("/images/img.jpg")no-repeat center center/cover;
+   
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 34px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+ 
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+
+}
+
+#contact-box form{
+    width: 40%;
+
+}
+#contact-box label{
+    font-size: 1.3rem;
+}
+
+footer{
+    background: red;
+    color: white;
+   font-size: 2rem;
+   padding: 12px;
+}
+
+/* contct section end */
+
+/* utility Clasess */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.2rem;
+    padding: 19px; 
+        
+ 
+}
+.h-seconadary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+    margin: 17px;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
+
+
+
+
+
